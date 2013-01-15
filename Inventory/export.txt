@@ -1,0 +1,49 @@
+	CSV layout:
+barcode|delivery_type|unit_of_measurement|status|Name|client_cost|SKU|division|group|category|subcategory|package_policy|provider_id|client_price|client_tax|modified_flag|id_shop
+
+Datatype:
+barcode				= Varchar 44
+delivery_type       = Integer
+unit_of_measurement = Varchar 20
+status              = Enum ( 'activo', 'inactivo ). Activo/Inactivo means Active/Inactive in english.
+name                = Varchar 44
+client_cost         = Decimal (10, 2)
+SKU                 = Long
+division            = Varchar 44
+group				= Varchar 44
+category			= Varchar 44
+subcategory			= Varchar 44 
+package_policy		= Varchar 44
+provider_id			= Long
+client_price		= Decimal (10, 2)
+client_tax			= Decimal (10, 2)
+modified_flag		= Boolean
+id_shop				= Long
+
+@@
+
+Values:
+SKU					= product.sku
+delivery_type		= 2
+unit_of_measurement = product.unit
+status				= product.status
+name				= product.name
+client_cost			= price.client_cost (depends on branch.id)
+SKU					= product.SKU
+division			= "" EMPTY
+category			= "" EMPTY
+subcategory			= "" EMPTY
+package_policy		= "" EMPTY
+provider_id			= 2000194
+client_price		= price.client_price
+client_tax			= price.client_tax
+modified_flag		= product.modified_flag
+id_shop				= branch.id
+
+Note:
+Is also necessary add the next attributes to price table, even if not are used in this task.
+- price.internal_cost
+- price.internal_tax
+- price.internal_price
+
+

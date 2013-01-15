@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+    <!DOCTYPE hibernate-mapping PUBLIC  
+            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.inventory.model">
+	<class name="Stock" table="Stock">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="branchId" column="branchId" type="long" />
+		<property name="productId" column="productId" type="long" />
+		<property name="quantity" column="quantity" type="long" />
+		<property name="expiration" column="expiration" />
+		<property name="ts" column="ts" />
+	</class>
+</hibernate-mapping>  

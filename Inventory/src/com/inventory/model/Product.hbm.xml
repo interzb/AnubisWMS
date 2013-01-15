@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+    <!DOCTYPE hibernate-mapping PUBLIC  
+            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.inventory.model">
+	<class name="Product" table="Product">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" column="name" />
+		<property name="sku" column="sku" />
+		<property name="category" column="category" />
+		
+		<property name="barcode" column="barcode" />
+		<property name="delivery_type" column="delivery_type" type="int" />
+		<property name="unit_of_measurement" column="unit_of_measurement" />
+		
+		<property name="status" column="status" />
+		
+		<property name="division" column="division" />
+		
+		<property name="group" column="groupname" />
+		<property name="subcategory" column="subcategory" />
+		<property name="package_policy" column="package_policy" />
+		
+		<property name="provider_id" column="provider_id" type="long"/>
+		
+		<property name="client_price" column="client_price" type="big_decimal"/>
+		<property name="client_tax" column="client_tax" type="big_decimal"/>
+		<property name="client_cost" column="client_cost" type="big_decimal" />
+ 
+		<property name="modified_flag" column="modified_flag" />
+		<property name="id_shop" column="id_shop"   type="long"/>
+ 	</class>
+</hibernate-mapping>  
