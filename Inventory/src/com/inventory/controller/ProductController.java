@@ -112,7 +112,7 @@ public class ProductController {
 			@RequestParam("client_price") BigDecimal client_price,
 			@RequestParam("client_tax") BigDecimal client_tax,
 			@RequestParam("modified_flag") String modified_flag,
-			@RequestParam("id_shop") Long id_shop,
+			 
 
 			ModelMap map, HttpServletRequest request) {
 		List<BaseVO> families = baseDAO.queryAll(Family.class.getName());
@@ -143,7 +143,7 @@ public class ProductController {
 			p.setDivision(division);
 			System.out.println("Group = " + group);
 			p.setGroup(group);
-			p.setId_shop(id_shop);
+			//p.setId_shop(id_shop);
 			p.setModified_flag(modified_flag);
 			p.setPackage_policy(package_policy);
 			p.setProvider_id(provider_id);
@@ -177,7 +177,7 @@ public class ProductController {
 			@RequestParam("client_price") BigDecimal client_price,
 			@RequestParam("client_tax") BigDecimal client_tax,
 			@RequestParam("modified_flag") String modified_flag,
-			@RequestParam("id_shop") Long id_shop,
+			 
 
 			@RequestParam("id") Long id, ModelMap map,
 			HttpServletRequest request) {
@@ -210,7 +210,7 @@ public class ProductController {
 			p.setDelivery_type(delivery_type);
 			p.setDivision(division);
 			p.setGroup(group);
-			p.setId_shop(id_shop);
+			//p.setId_shop(id_shop);
 			p.setModified_flag(modified_flag);
 			p.setPackage_policy(package_policy);
 			p.setProvider_id(provider_id);

@@ -183,21 +183,7 @@ List<BaseVO> branches =  (List<BaseVO>)request.getAttribute("Branches");
 											
 											
 
-											<tr>
-												<td nowrap align="right">Product ID_shop:</td>
-												<td>
-												<select name=id_shop>
-													<%
-														for(BaseVO v : branches)  {
-														Branch f = (Branch)v;
-													%>
-														<option value="<%=f.getId() %>"><%=f.getName() %></option>
-													<%} %>
-												</select>
-													
-													<span class="red"> *<%=RequestUtil.geteMessage(request, "Id_shop_Error") %></span></td>
-											</tr>
-	
+											 
 										 
 
 										</table>

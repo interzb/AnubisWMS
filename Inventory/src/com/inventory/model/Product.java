@@ -29,7 +29,7 @@ public class Product extends BaseVO {
 	private BigDecimal client_price;
 	private BigDecimal client_tax;
 	private String modified_flag;
-	private Long id_shop;
+	//private Long id_shop;
 
 	public String getName() {
 		return name;
@@ -162,12 +162,6 @@ public class Product extends BaseVO {
 		this.modified_flag = modified_flag;
 	}
 
-	public Long getId_shop() {
-		return id_shop;
-	}
-
-	public void setId_shop(Long id_shop) {
-		this.id_shop = id_shop;
-	}
+	 
 
 }

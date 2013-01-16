@@ -30,6 +30,6 @@
 		<property name="client_cost" column="client_cost" type="big_decimal" />
  
 		<property name="modified_flag" column="modified_flag" />
-		<property name="id_shop" column="id_shop"   type="long"/>
+<!--		<property name="id_shop" column="id_shop"   type="long"/>-->
  	</class>
 </hibernate-mapping>  
