@@ -105,7 +105,7 @@ PageView pageView = (PageView)request.getAttribute("Products");
                      <td width="15%" align="center" bgcolor="#EEEEEE">Barcode</td>
                     <td width="10%" align="center" bgcolor="#EEEEEE">Category</td>
                      <td width="10%" align="center" bgcolor="#EEEEEE">SubCategory</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">ShoprID</td>
+<!--                    <td width="10%" align="center" bgcolor="#EEEEEE">ShoprID</td>-->
                      <td width="8%" align="center" bgcolor="#EEEEEE">Price</td>
                        <td width="8%" align="center" bgcolor="#EEEEEE">Tax</td>
                          <td width="8%" align="center" bgcolor="#EEEEEE">Cost</td>
@@ -127,7 +127,7 @@ PageView pageView = (PageView)request.getAttribute("Products");
                      <td bgcolor="#FFFFFF"><%=p.getBarcode() %></td>
                     <td bgcolor="#FFFFFF"><%=p.getCategory() %></td>
                      <td bgcolor="#FFFFFF"><%=p.getSubcategory() %></td>
-                    <td bgcolor="#FFFFFF"><%=p.getId_shop() %></td>
+ 
                       <td bgcolor="#FFFFFF"><%=p.getClient_price() %></td>
                        <td bgcolor="#FFFFFF"><%=p.getClient_tax() %></td>
                        <td bgcolor="#FFFFFF"><%=p.getClient_cost() %></td>

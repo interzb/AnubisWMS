@@ -14,7 +14,11 @@
 
 <%	
 	String context = request.getContextPath();
-	String path = "http://"+request.getRemoteHost()+":"+request.getLocalPort()+context+"/";
+	String url = request.getRequestURL().toString();
+	
+	System.out.println(url);
+	String path = url.substring(0,url.indexOf("views"));
+	System.out.println(path);
  
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -43,6 +47,7 @@
                  			url:path+'productsInBranch.do?branchId='+$('.originalBranch').val(),  
                  			 
                  			error:function(){  
+                 				alert(path);
                  				alert("Loading error occured,Please try again later");  
                  			},  
                  			success:function(data){  
