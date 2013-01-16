@@ -117,6 +117,7 @@ public class BaseDaoImpl implements BaseDao {
 				cols.add(meta.getColumnName(i));
 				header+=(cols.get(i-1)+",");
 			}
+			header = header.substring(0,header.length()-1);
 			System.out.println("header="+header);
 			//System.out.println("cols: = "+header);
 			w.write(header);
@@ -127,6 +128,7 @@ public class BaseDaoImpl implements BaseDao {
 				for(String name : cols){
 					line+=((rs.getObject(name))+",");
 				}
+				line = line.substring(0,line.length()-1);
 				w.write(line);
 				w.newLine();
 			}
